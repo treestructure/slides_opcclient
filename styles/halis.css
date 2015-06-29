@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3049761, 2015-06-26T11:45:55-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HalisR-Black by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/black/
+ * 
+ * Webfont: HalisR-Bold by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/bold/
+ * 
+ * Webfont: HalisR-Book by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/book/
+ * 
+ * Webfont: HalisR-Thin by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/thin/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3049761
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2e8921");
+
+  
+@font-face {font-family: 'HalisR-Black';src: url('webfonts/2E8921_0_0.eot');src: url('webfonts/2E8921_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E8921_0_0.woff2') format('woff2'),url('webfonts/2E8921_0_0.woff') format('woff'),url('webfonts/2E8921_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HalisR-Bold';src: url('webfonts/2E8921_1_0.eot');src: url('webfonts/2E8921_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E8921_1_0.woff2') format('woff2'),url('webfonts/2E8921_1_0.woff') format('woff'),url('webfonts/2E8921_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HalisR-Book';src: url('webfonts/2E8921_2_0.eot');src: url('webfonts/2E8921_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E8921_2_0.woff2') format('woff2'),url('webfonts/2E8921_2_0.woff') format('woff'),url('webfonts/2E8921_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HalisR-Thin';src: url('webfonts/2E8921_3_0.eot');src: url('webfonts/2E8921_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E8921_3_0.woff2') format('woff2'),url('webfonts/2E8921_3_0.woff') format('woff'),url('webfonts/2E8921_3_0.ttf') format('truetype');}
+ 

@@ -1,0 +1,38 @@
+html, body {
+  font-family: "HalisR-Black";
+  color: #0ef095;
+  background: #994708; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+  color: white;
+  font-weight: normal; }
+
+.step {
+  opacity: 0.1; }
+
+.active {
+  opacity: 1; }
+
+.logoarea {
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  color: #0ef095;
+  font-family: "HalisR-Book";
+  letter-spacing: 0.3em; }
+  .logoarea #logo {
+    position: absolute;
+    left: -40px;
+    top: -6px; }
+
+.slide {
+  width: 1000px;
+  font-size: 300%; }

@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <link href="styles/main.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  </head>
+  <body>
+
+
+
+    <div class="logoarea" >
+      <img src="img/logo.png" border="0" id="logo"/>
+      treestructure
+    </div>
+
+
+    <div id="impress">
+
+      <div id="start" class="step slide" data-x="-4000" data-y="-4000">
+        <h1>Building a Client for OPC-UA in Javascript</h1>
+      </div>
+
+
+
+
+      <div id="opc" class="step slide" data-x="-2000" data-y="-5000" data-scale="300">
+        <h1>OPC-What ?</h1>
+        Machine-2-Machine <br/>
+        connect embedded to enterprise world
+      </div>
+
+      <div id="opcimg" class="step slide" data-x="70000" data-y="7000" data-scale="50">
+        <img src="img/opcoverview.png" />
+      </div>
+
+
+
+      <div class="step slide" id="challanges" data-y="-3000" data-x="3000" data-scale="10">
+        <h1>Challanges</h1>
+        <ul>
+          <li>Complex Structure</li>
+          <li>Binary</li>
+          <li>Encrypted</li>
+        </ul>
+      </div>
+
+
+
+      <div class="step slide" id="opcdesc" data-x="5000" data-y="-3500" data-scale="0.5">
+        <h1>How does OPC work ?</h1>
+      </div>
+
+      <div class="step slide" id="datarep" data-x="4500" data-y="-3000" data-scale="1">
+        <h1>Data Representation</h1>
+      </div>
+
+      <div class="step slide" id="communcation" data-x="5700" data-y="-2800" data-scale="1.5">
+        <h1>Messages</h1>
+      </div>
+
+      <div class="step slide" id="encoding" data-x="6700" data-y="-3500" data-scale="2">
+        <h1>Encodings</h1>
+      </div>
+
+
+
+
+
+      <div class="step slide" id="binaryjs" data-x="5000" data-y="5000" >
+        <h1>Binary Data in JS</h1>
+        Tools Handling Binary Data
+        <ul>
+          <li>ArrayBuffer</li>
+          <li>DataView</li>
+          <li>Typed Arrays</li>
+        </ul>
+
+      </div>
+
+
+      <div class="step slide" id="nextitem" data-x="5000" data-y="6000" >
+        <pre>
+<code class="javascript">
+var buffer = new ArrayBuffer(length);
+var view  = new DataView(buffer);
+<code> 
+        </pre> 
+      </div>
+    </div> 
+
+    <script src="impress.js"></script>
+    <script>impress().init();</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>   <title>Building an OPCUA CLient in Javascript</title>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
