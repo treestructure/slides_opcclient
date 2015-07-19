@@ -1,0 +1,12 @@
+
+Number bitshifting:
+--------------------------------------------------------------------------------
+typer.cc
+
+
+Cryptography:
+--------------------------------------------------------------------------------
+https://code.google.com/p/crypto-js/
+http://www-cs-students.stanford.edu/~tjw/jsbn/
+https://bitwiseshiftleft.github.io/sjcl/
+http://www.jcryption.org/

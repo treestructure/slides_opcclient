@@ -2,8 +2,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
-    <link href="styles/main.css" rel="stylesheet"></link>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link href="styles/main.css" rel="stylesheet"></link>
   </head>
   <body>
 
@@ -19,24 +19,121 @@
 
       <div id="start" class="step slide" data-x="-4000" data-y="-4000">
         <h1>Building a Client for OPC-UA in Javascript</h1>
+        Martin Baum
       </div>
 
 
 
-
-      <div id="opc" class="step slide" data-x="-2000" data-y="-5000" data-scale="300">
+      <div id="opcwhat" class="step slide" data-x="-2000" data-y="-5000" data-scale="300">
         <h1>OPC-What ?</h1>
         Machine-2-Machine <br/>
-        connect embedded to enterprise world
+        connect embedded to enterprise world<br/>
+        abstraction layer<br/>
+        on IP level
       </div>
 
-      <div id="opcimg" class="step slide" data-x="70000" data-y="7000" data-scale="50">
-        <img src="img/opcoverview.png" />
+
+
+      <div id="opcimg" class="step slide" data-x="70000" data-y="-10000" data-scale="50">
+        <img src="img/opcoverview.png" id="opcoverview"/>
       </div>
 
 
 
-      <div class="step slide" id="challanges" data-y="-3000" data-x="3000" data-scale="10">
+
+      <div id="factory" class="step slide" data-x="70000" data-y="-50000" data-scale="50">
+        <img src="img/industrie40.png" id="industrie"/>
+      </div>
+
+
+      <div id="building" class="step slide" data-x="70000" data-y="-100000" data-scale="50">
+        <img src="img/building.png" id="building"/>
+      </div>
+
+      <div id="spec" class="step slide" data-x="70000" data-y="-150000" data-scale="50">
+        <h1>OPC-UA specification</h1>
+        <ul>
+          <li>not open source</li>
+          <li>hostet by the OPC-Foundation</li>
+          <li>far more than a protocol - more a framework to build your own</li>
+          <li>very complex - 13 partial specifications for many purposes like 
+          encoding, verfication, encoding, Object Orientation, security</li>
+          <li>Even an own visual language</li>
+          <li>Clients and Servers in C/C++, Java, .NET</li>
+        </ul>
+      </div>
+
+
+      <div class="step slide" id="opcdesc" data-x="5000" data-y="-3500" data-scale="0.5">
+        <h1>How does it work ?</h1>
+      </div>
+
+
+
+
+
+      <div class="step slide" id="datarep" data-x="4500" data-y="-3000" data-scale="1">
+        <h1>Adress Space</h1>
+        <ul>
+          <li>Everything is a Node</li>
+          <li>Nodes are related to each other</li>
+          <li>Nodes have Attributes - NodeId, Value, Type</li>
+          <li>Objects, Variables, Methods</li>
+          <li>Can be Modified</li>
+        </ul>
+      </div>
+
+
+      <div id="opcstruct" class="step slide" data-x="4600" data-y="-2500" data-scale="0.5">
+        <br/>
+        <br/>
+        <br/>
+        <img src="img/opcstructure.png"  id="opcstructure"/>
+      </div>
+
+
+
+      <div class="step slide" id="communcation" data-x="5700" data-y="-2800" data-scale="1.5">
+        <h1>Messages</h1>
+        <ul>
+          <li>Everything is a Service</li>
+          <li>Services define messaging protocols</li>
+          <li>Browse, Read, Write, Sessions, Subscriptions</li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="step slide" id="encoding" data-x="6700" data-y="-3500" data-scale="2">
+        <h1>Encodings</h1>
+        <ul>
+          <li>Services define structure of messages</li>
+          <li>Binary or XML Encoding</li>
+          <li>set of primitive types</li>
+          <li>cascading structured types</li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="step slide" id="requirements" data-x="7100" data-y="-4100" data-scale="0.8">
+        <h1>Requirements</h1>
+        <ul>
+          <li>display and write data from devices</li>
+          <li>dynamically monitor values</li>
+          <li>No middleware between the OPC server and the browser</li>
+          <li>Wide browser support esp. IE9</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+      <div class="step slide" id="challanges" data-x="7100" data-y="-3780" data-scale="0.8">
         <h1>Challanges</h1>
         <ul>
           <li>Complex Structure</li>
@@ -47,48 +144,196 @@
 
 
 
-      <div class="step slide" id="opcdesc" data-x="5000" data-y="-3500" data-scale="0.5">
-        <h1>How does OPC work ?</h1>
-      </div>
-
-      <div class="step slide" id="datarep" data-x="4500" data-y="-3000" data-scale="1">
-        <h1>Data Representation</h1>
-      </div>
-
-      <div class="step slide" id="communcation" data-x="5700" data-y="-2800" data-scale="1.5">
-        <h1>Messages</h1>
-      </div>
-
-      <div class="step slide" id="encoding" data-x="6700" data-y="-3500" data-scale="2">
-        <h1>Encodings</h1>
-      </div>
 
 
-
-
-
-      <div class="step slide" id="binaryjs" data-x="5000" data-y="5000" >
+      <div class="step slide" id="binaryjs" data-x="6500" data-y="-3950" data-rotate="90" data-scale="0.4">
         <h1>Binary Data in JS</h1>
-        Tools Handling Binary Data
+        Tools for handling Binary Data
         <ul>
           <li>ArrayBuffer</li>
+          <li>Blob</li>
           <li>DataView</li>
           <li>Typed Arrays</li>
         </ul>
-
       </div>
 
 
-      <div class="step slide" id="nextitem" data-x="5000" data-y="6000" >
+
+
+
+
+
+      <div class="step slide" id="code1" data-x="6330" data-y="-3950" data-rotate="90" data-scale="0.4">
         <pre>
 <code class="javascript">
 var buffer = new ArrayBuffer(length);
+
 var view  = new DataView(buffer);
-<code> 
+var num = view.getInt32(31, true);
+view.setFloat(127, 42.69, true);
+</code> 
         </pre> 
       </div>
-    </div> 
 
+
+
+      <div class="step slide" id="code2" data-x="6240" data-y="-3950" data-rotate="90" data-scale="0.4">
+        <pre>
+<code class="javascript">
+// typed array used like normal array
+var list = new Int32Array(buffer); 
+list[0] = 'wrong'; // throws exception
+var 32bit = list[15];
+</code> 
+        </pre> 
+      </div>
+
+
+
+
+
+      <div class="step slide" id="code3" data-x="6160" data-y="-3950" data-rotate="90" data-scale="0.4">
+        <pre>
+<code class="javascript">
+// receive as binary
+var binReq = new XMLHttpRequest();
+binReq.open('POST', 'binary/data/url');
+binReq.responseType = "arraybuffer";
+</code> 
+        </pre> 
+      </div>
+
+
+
+
+      <div class="step slide" id="code4" data-x="6070" data-y="-3950" data-rotate="90" data-scale="0.4">
+        <pre>
+<code class="javascript">
+// send as binary - impossible in IE9
+var sendData = new TypedArray(32);
+getMessage(sendData);
+binReq.open('POST', 'binary/data/url');
+binReq.send(sndBuffer); 
+</code> 
+        </pre> 
+      </div>
+
+
+
+
+      <div class="step slide" id="code5" data-x="5980" data-y="-3950" data-rotate="90" data-scale="0.4">
+        <pre>
+<code class="javascript">
+// receiving in IE
+new VBArray(xhrObj.responseBody).toArray();
+
+[76, 67, 120, 27, 177, 0, 255,..........]
+</code>
+        </pre>
+      </div>
+
+
+
+      <div class="step slide" id="butnow" data-x="5980" data-y="-4400" data-rotate="180" data-scale="0.4">
+        <h1>But now ?</h1>
+        <ul>
+          <li>How to read basic datatypes ?</li>
+          <li>How to handle floating point ?</li>
+          <li>How to read strings ?</li>
+          <li>How to parse messages on top of that?</li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="integer" data-x="5980" data-y="-5400" data-rotate="180" data-scale="0.4">
+        <h1>Integer Format</h1>
+        <img src="img/integer.png" />
+        <ul>
+          <li>Bitlength</li>
+          <li>Signing</li>
+          <li>Endianess</li>
+          <li>(U)Int 8 - 64</li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="floatingpoint" data-x="5980" data-y="-5800" data-rotate="180" data-scale="0.4">
+        <h1>IEEE 754</h1>
+        <img src="img/ieee754.png" id="ieee754" />
+        <ul>
+          <li>Sign + Exponent + Mantissa</li>
+          <li>32 / 64 / 128 bit precision</li>
+          <li>Sign * (-1) + 2 <sup>Exponent - Bias</sup> * Mantissa</li>
+          <li>Shift the mantissa right by Exponent - Bias times</li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="numbers" data-x="5980" data-y="-6200" data-rotate="180" data-scale="0.4">
+        <h1>Numbers in Javascript</h1>
+        <ul>
+          <li>Every number in Javascript is a <br/> 64-bit IEEE64 Value</li>
+          <li>2<sup>53</sup> Integer values possible -length of Mantissa</li>
+          <li>no BigInt in javascript</li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="bitwise" data-x="5980" data-y="-6600" data-rotate="180" data-scale="0.4">
+        <h1>Bit Level Operators</h1>
+          <ul>
+            <li>Shift operators: &lt;&lt;, &gt;&gt;, &gt;&gt;&gt; </li>
+            <li>Logical Operators: ^, | , & </li>
+            <li>converted to 32-bit integer before execution</li>
+            <li class="highlight">loss of precicion and performance!</li>
+            <li class="highlight">no shifting for floating points!</li>
+          </ul>
+        </h1>
+      </div>
+      
+      <div class="step slide" id="concBinary" data-x="5980" data-y="-7000" data-rotate="180" data-scale="0.4">
+        <h1>Approach for parsing Binary</h1>
+        <ol>
+          <li>Take n bytes from the bytearray</li>
+          <li>calculate value for Integer or Float</li>
+          <li>Usage of Utf.js and BigInt.js for parsing Strings and 64 bit integers</li>
+          <li>recursively build up cascading object tree based on message type</li>
+        </ol>
+      </div>
+
+      <div class="step slide" id="encryption" data-x="5300" data-y="-6600" >
+        <h1>next chellange</h1>
+        encryption<br/>
+        Implement RSA-OAEP encryption for security relevant information<br/>
+        parsing server's public key
+      </div>
+
+
+
+      <div class="step slide" id="encstate" data-x="5300" data-y="-6000" >
+        <h1>Javascript Cryptography</h1>
+        <ul>
+          <li>Web Crypto Libaries exist but with very different approaches</li>
+          <li>Most hashing algorithms are implemented</li>
+          <li>incomplete and outdated working mostly on string operations</li>
+          <li>Some Examples:
+            <li>Stanford Javascript Encryption Libary</li>
+            <li>Crypto-JS mostly string based</li> 
+            <li>jCryption</li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="conlusion" data-x="1800" data-y="-5500" data-scale="10">
+        <h1>Conclusion</h1>
+        <ul>
+          <li>binary protocols are highly performant</li>
+          <li>be cautious with clientside calculations<br/>and bitwise operators</li>
+          <li>options exist to secure communication <br/>between the browser and the server</li>
+        </ul>
+      </div>
+
+      <div class="step slide" id="thanks" data-x="-4700" data-y="-3950" data-scale="0.8">
+        <h1>Thanks!</h1>
+        martin.baum@treestructure.net
+      </div>
+    </div> 
     <script src="impress.js"></script>
     <script>impress().init();</script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>   <title>Building an OPCUA CLient in Javascript</title>

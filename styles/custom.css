@@ -33,6 +33,40 @@ label {
     left: -40px;
     top: -6px; }
 
+.highlight {
+  color: white; }
+
 .slide {
   width: 1000px;
-  font-size: 300%; }
+  font-size: 250%; }
+
+img#opcstructure {
+  width: 50vw; }
+
+img#opcoverview,
+img#building,
+img#industrie {
+  height: 80vh; }
+
+img#ieee754 {
+  width: 81vw; }
+
+.hljs {
+  background: transparent;
+  color: white; }
+
+.hljs-keyword {
+  color: #0ef095; }
+
+.hljs-string,
+.hljs-literal,
+.hljs-number {
+  color: #57f2b4; }
+
+.hljs-built_in {
+  color: #b088fe; }
+
+.hljs-comment {
+  color: #d49f0B; }
+
+/*# sourceMappingURL=custom.css.map */
