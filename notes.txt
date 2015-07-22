@@ -1,3 +1,7 @@
+ArrayBuffer -> allocated Memory
+TypedArray -> represent buffer as array of int8/16/32
+DataView -> write or read to a buffer for certain types in a given formaDataView -> write or read to a buffer for certain types in a given formatt
+
 
 Number bitshifting:
 --------------------------------------------------------------------------------

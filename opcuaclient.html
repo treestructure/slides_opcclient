@@ -110,6 +110,7 @@
         <ul>
           <li>Services define structure of messages</li>
           <li>Binary or XML Encoding</li>
+          <li>transport over http or plain tcp</li>
           <li>set of primitive types</li>
           <li>cascading structured types</li>
         </ul>
@@ -151,9 +152,9 @@
         Tools for handling Binary Data
         <ul>
           <li>ArrayBuffer</li>
+          <li>Typed Arrays (ArrayBufferView)</li>
+          <li>DataView (ArrayBufferView)</li>
           <li>Blob</li>
-          <li>DataView</li>
-          <li>Typed Arrays</li>
         </ul>
       </div>
 
@@ -171,19 +172,27 @@ var buffer = new ArrayBuffer(length);
 var view  = new DataView(buffer);
 var num = view.getInt32(31, true);
 view.setFloat(127, 42.69, true);
+view.setUint8(0,255, true);
+view.setInt16(1,255, true);
+// problematic
+view.setFloat(127,true);
 </code> 
         </pre> 
       </div>
 
 
 
-      <div class="step slide" id="code2" data-x="6240" data-y="-3950" data-rotate="90" data-scale="0.4">
+      <div class="step slide" id="code2" data-x="6200" data-y="-3950" data-rotate="90" data-scale="0.4">
         <pre>
 <code class="javascript">
 // typed array used like normal array
 var list = new Int32Array(buffer); 
 list[0] = 'wrong'; // throws exception
 var 32bit = list[15];
+// typed arrays offer array like behaviour
+list.sort();
+list.subarray();
+list.map(function(){});
 </code> 
         </pre> 
       </div>
@@ -192,12 +201,12 @@ var 32bit = list[15];
 
 
 
-      <div class="step slide" id="code3" data-x="6160" data-y="-3950" data-rotate="90" data-scale="0.4">
+      <div class="step slide" id="code3" data-x="6110" data-y="-3950" data-rotate="90" data-scale="0.4">
         <pre>
 <code class="javascript">
 // receive as binary
 var binReq = new XMLHttpRequest();
-binReq.open('POST', 'binary/data/url');
+binReq.open('GET', 'binary/data/url');
 binReq.responseType = "arraybuffer";
 </code> 
         </pre> 
@@ -206,7 +215,7 @@ binReq.responseType = "arraybuffer";
 
 
 
-      <div class="step slide" id="code4" data-x="6070" data-y="-3950" data-rotate="90" data-scale="0.4">
+      <div class="step slide" id="code4" data-x="6040" data-y="-3950" data-rotate="90" data-scale="0.4">
         <pre>
 <code class="javascript">
 // send as binary - impossible in IE9
@@ -221,7 +230,7 @@ binReq.send(sndBuffer);
 
 
 
-      <div class="step slide" id="code5" data-x="5980" data-y="-3950" data-rotate="90" data-scale="0.4">
+      <div class="step slide" id="code5" data-x="5970" data-y="-3950" data-rotate="90" data-scale="0.4">
         <pre>
 <code class="javascript">
 // receiving in IE
@@ -286,20 +295,47 @@ new VBArray(xhrObj.responseBody).toArray();
           </ul>
         </h1>
       </div>
-      
-      <div class="step slide" id="concBinary" data-x="5980" data-y="-7000" data-rotate="180" data-scale="0.4">
+    
+      <div class="step slide" id="fpproblem" data-x="5980" data-y="-7000" data-rotate="180" data-scale="0.4">
+        <h1>Floatingpoints and Dataviews</h1>
+        <ul>
+          <li>DataView.getFloat and setFloat are not precise</li>
+          <li>own IEEE754 construction needed</li>
+          <li>based alot on string operations and rounding</li>
+
+        </ul>
+      </div>
+
+
+      <div class="step slide" id="strings" data-x="5980" data-y="-7400" data-rotate="180" data-scale="0.4">
+        <h1>Strings and Big Integer</h1>
+        <ol>
+          <li>Strings in OPC-UA are represented as UTF-8</li>
+          <li>utf8.js: Array of Byte to Utf8 String</li>
+          <li>Bignumber.js - based on arrays</li>
+          <li>Builds its own Arithmetics for arbitary precicion</li>
+        </ol>
+      </div>
+
+
+
+      <div class="step slide" id="concBinary" data-x="5980" data-y="-7800" data-rotate="180" data-scale="0.4">
         <h1>Approach for parsing Binary</h1>
         <ol>
-          <li>Take n bytes from the bytearray</li>
+          <li>Take n bytes from the dataview</li>
           <li>calculate value for Integer or Float</li>
           <li>Usage of Utf.js and BigInt.js for parsing Strings and 64 bit integers</li>
+          <li>increment a bytecounter</li>
           <li>recursively build up cascading object tree based on message type</li>
         </ol>
       </div>
 
+
+
+
+
       <div class="step slide" id="encryption" data-x="5300" data-y="-6600" >
-        <h1>next chellange</h1>
-        encryption<br/>
+        <h1>next challenge</h1>
         Implement RSA-OAEP encryption for security relevant information<br/>
         parsing server's public key
       </div>
@@ -311,11 +347,13 @@ new VBArray(xhrObj.responseBody).toArray();
         <ul>
           <li>Web Crypto Libaries exist but with very different approaches</li>
           <li>Most hashing algorithms are implemented</li>
-          <li>incomplete and outdated working mostly on string operations</li>
+          <li>working mostly on string operations - unperformant</li>
           <li>Some Examples:
+          <ul>
             <li>Stanford Javascript Encryption Libary</li>
             <li>Crypto-JS mostly string based</li> 
             <li>jCryption</li>
+          </ul>
           </li>
         </ul>
       </div>
@@ -324,6 +362,7 @@ new VBArray(xhrObj.responseBody).toArray();
         <h1>Conclusion</h1>
         <ul>
           <li>binary protocols are highly performant</li>
+          <li>Binary tooling in Javascript exists for<br/> messaging and the canvas</li>
           <li>be cautious with clientside calculations<br/>and bitwise operators</li>
           <li>options exist to secure communication <br/>between the browser and the server</li>
         </ul>
