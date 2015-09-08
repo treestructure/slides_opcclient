@@ -54,7 +54,7 @@
         <h1>OPC-UA specification</h1>
         <ul>
           <li>not open source</li>
-          <li>hostet by the OPC-Foundation</li>
+          <li>hosted by the OPC-Foundation</li>
           <li>far more than a protocol - more a framework to build your own</li>
           <li>very complex - 13 partial specifications for many purposes like 
           encoding, verfication, encoding, Object Orientation, security</li>
@@ -288,8 +288,9 @@ new VBArray(xhrObj.responseBody).toArray();
         <h1>Bit Level Operators</h1>
           <ul>
             <li>Shift operators: &lt;&lt;, &gt;&gt;, &gt;&gt;&gt; </li>
-            <li>Logical Operators: ^, | , & </li>
+            <li>Logical Operators: ^, | , &, ~ </li>
             <li>converted to 32-bit integer before execution</li>
+            <li>mostly used as a replacement for Math.floor()</li>
             <li class="highlight">loss of precicion and performance!</li>
             <li class="highlight">no shifting for floating points!</li>
           </ul>
@@ -309,12 +310,12 @@ new VBArray(xhrObj.responseBody).toArray();
 
       <div class="step slide" id="strings" data-x="5980" data-y="-7400" data-rotate="180" data-scale="0.4">
         <h1>Strings and Big Integer</h1>
-        <ol>
+        <ul>
           <li>Strings in OPC-UA are represented as UTF-8</li>
           <li>utf8.js: Array of Byte to Utf8 String</li>
           <li>Bignumber.js - based on arrays</li>
-          <li>Builds its own Arithmetics for arbitary precicion</li>
-        </ol>
+          <li>Builds its own Arithmetics for arbitrary precicion</li>
+        </ul>
       </div>
 
 
