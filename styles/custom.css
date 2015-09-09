@@ -1,7 +1,25 @@
+.hljs {
+  background: transparent;
+  color: white; }
+
+.hljs-keyword {
+  color: #6ccb00; }
+
+.hljs-string,
+.hljs-literal,
+.hljs-number {
+  color: #57f2b4; }
+
+.hljs-built_in {
+  color: #b088fe; }
+
+.hljs-comment {
+  color: #d49f0B; }
+
 html, body {
-  font-family: "HalisR-Black";
-  color: #0ef095;
-  background: #994708; }
+  font-family: "Myriad Pro";
+  color: #6ccb00;
+  background: #404242; }
 
 h1,
 h2,
@@ -10,7 +28,8 @@ h4,
 h5,
 label {
   color: white;
-  font-weight: normal; }
+  font-weight: normal;
+  font-family: "MyriadBold"; }
 
 .step {
   opacity: 0.1; }
@@ -19,19 +38,12 @@ label {
   opacity: 1; }
 
 .logoarea {
-  color: white;
-  font-size: 22px;
-  text-transform: uppercase;
   position: fixed;
-  bottom: 10px;
-  left: 50px;
-  color: #0ef095;
-  font-family: "HalisR-Book";
-  letter-spacing: 0.3em; }
-  .logoarea #logo {
-    position: absolute;
-    left: -40px;
-    top: -6px; }
+  bottom: 120px;
+  left: 15px;
+  height: 30px; }
+  .logoarea img {
+    height: 200px; }
 
 .highlight {
   color: white; }
@@ -55,23 +67,5 @@ img#example {
 
 img#ieee754 {
   width: 81vw; }
-
-.hljs {
-  background: transparent;
-  color: white; }
-
-.hljs-keyword {
-  color: #0ef095; }
-
-.hljs-string,
-.hljs-literal,
-.hljs-number {
-  color: #57f2b4; }
-
-.hljs-built_in {
-  color: #b088fe; }
-
-.hljs-comment {
-  color: #d49f0B; }
 
 /*# sourceMappingURL=custom.css.map */
