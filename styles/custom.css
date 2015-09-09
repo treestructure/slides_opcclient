@@ -60,6 +60,11 @@ img#building,
 img#industrie {
   height: 80vh; }
 
+img#parser {
+  width: 88vh;
+  position: relative;
+  top: -8vh; }
+
 img#example {
   position: absolute;
   top: 5vh;
