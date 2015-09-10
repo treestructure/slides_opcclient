@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <title>Building a Client for OPC-UA in Javascript</title>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link rel="stylesheet" href="styles/highlight.css">
     <link href="styles/main.css" rel="stylesheet"></link>
   </head>
   <body>
@@ -51,7 +51,7 @@
       </div>
 
       <div id="goals" class="step slide" data-x="70000" data-y="-150000" data-scale="50">
-        <h1>Goals</h1>
+        <h1>Achievements</h1>
         <ul>
           <li>Interoperability</li>
           <li>Robustness</li>
@@ -66,9 +66,10 @@
         <ul>
           <li>hosted by the OPC-Foundation</li>
           <li>far more than a protocol - more a framework to build your own</li>
-          <li>very complex - 13 partial specifications for many purposes like 
-          encoding, verfication, encoding, Object Orientation, security</li>
+          <li>very complex - 13 partial specifications for many purposes like:
+          encoding, verfication, notifications, remote execution, object orientation, security, discovery</li>
           <li>Clients and Servers in C/C++, Java, .NET</li>
+          <li>wide support by software and hardware vendors</li>
         </ul>
       </div>
 
@@ -87,8 +88,8 @@
           <li>Everything is a Node</li>
           <li>Nodes are related to each other</li>
           <li>Nodes have Attributes - NodeId, Value, Type</li>
-          <li>Objects, Variables, Methods</li>
-          <li>Can be Modified</li>
+          <li>Nodes have Types: Objects, Variables, Methods</li>
+          <li>Mutable: Nodes can be Added, Modified and Removed</li>
         </ul>
       </div>
 
@@ -107,7 +108,7 @@
         <ul>
           <li>Everything is a Service</li>
           <li>Services define messaging protocols</li>
-          <li>Browse, Read, Write, Sessions, Subscriptions</li>
+          <li>Browse, Read, Write, Call Methods, Sessions, Subscriptions</li>
         </ul>
       </div>
 
@@ -389,7 +390,7 @@ new VBArray(xhrObj.responseBody).toArray();
     </div> 
     <script src="impress.js"></script>
     <script>impress().init();</script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>   <title>Building an OPCUA CLient in Javascript</title>
+    <script src="highlight.min.js"></script>   
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
