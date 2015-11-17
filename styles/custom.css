@@ -56,6 +56,11 @@ img#example {
 img#ieee754 {
   width: 81vw; }
 
+img#system750 {
+  width: 100vw;
+  position: relative;
+  left: -30%; }
+
 .hljs {
   background: transparent;
   color: white; }
