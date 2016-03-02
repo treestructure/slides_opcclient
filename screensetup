@@ -1,0 +1,19 @@
+altscreen on
+vbell off
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+defscrollback 1500
+bindkey -k k1 colon
+bindkey -k k2 screen
+bindkey -k F2 windowlist -b
+chdir /projects/uaserver/sdk/bin
+screen -t "OPC-UA Server" ./uaservercpp
+chdir /projects/wscclient/js/fixtures
+screen -t "Datatypes" vi complextypes.js primitivetypes.js
+caption always '%{Yb}[%=%t%=]'
+select 0
+split -v
+focus
+select 1
+focus

@@ -29,8 +29,8 @@
         the bridge between the enterprise and the embedded world
       </div>
 
-      <div id="goals" class="step slide" data-x="70000" data-y="-200000" data-scale="50">
-        <h1>Goals</h1>
+      <div id="goals" class="step slide hidden" data-x="70000" data-y="-200000" data-scale="50">
+        <h1>Why ?</h1>
         <ul>
           <li>Interoperability</li>
           <li>Robustness</li>
@@ -40,12 +40,9 @@
         <img src="img/example.jpg" id="example"/>
       </div>
 
-
       <div id="opcimg" class="step slide" data-x="70000" data-y="-10000" data-scale="50">
         <img src="img/opcoverview.png" id="opcoverview"/>
       </div>
-
-
 
 
       <div id="factory" class="step slide" data-x="70000" data-y="-50000" data-scale="50">
@@ -57,8 +54,24 @@
         <img src="img/building.png" id="building"/>
       </div>
 
+      <div id="pyramide" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <img src="img/pyramide.png" id="pyramide" style="height: 80%">
+      </div>
+
+      <div id="opcfoundation" class="step slide hidden" data-x="70000" data-y="-200000" data-scale="50">
+        <h1>The OPC Foundation</h1>
+        since 1996 - OLE Objects for Process Control
+        <img src="img/logos_automation/opcfoundation.png" id="opcfoundation"/>
+      </div>
+
+
+      <div id="opccompanies" class="step slide hidden" data-x="70000" data-y="-200000" data-scale="50" style="position: static">
+        <img src="img/alllogos.png" style="border: 10px solid white; height: 100%  ">
+      </div>
+
+
       <div id="history1" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
-        <h1>Industrie 4.0</h1>
+        <h1>Industry 4.0</h1>
         <img src="./img/simatic.png" style="height: 70%; position: relative; top: -20%; left: 20%"/>
       </div>
 
@@ -69,14 +82,21 @@
           <li>PLC/SPS - 1968 by Honeywell</li>
           <li>Industrial Ethernet since 1985</li>
           <li>Rise of contemporary bus systems (Modbus, DALI, Profibus, Foundation)</li>
-          <li>Multiprotocol Bus Systems</li>
+          <li>Multiprotocol Automation Systems</li>
+        </ul>
+      </div>
+      <div id="history3" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>History of OPC-UA</h1>
+        <ul>
+          <li>first approach to achieve Interoperability in 1995</li>
+          <li>OPC Spec in 1996</li>
+          <li>origins in MS DCOM</li>
+          <li>first release in 2006</li>
+          <li>rework in 2009 - becoming IEC standard</li>
         </ul>
       </div>
               
 
-      <div id="history3" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
-        <img src="img/pyramide.png" id="pyramide" style="height: 80%">
-      </div>
 
 
 
@@ -85,15 +105,20 @@
       </div>
 
       <div id="datarep" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
-        <h1>Adress Space</h1>
+        <h1>Address Space</h1>
         <ul>
           <li>Everything is a Node</li>
           <li>Nodes are related to each other</li>
           <li>Nodes have Attributes</li>
           <li>Nodes are of a certain type</li>
-          <li>Dynamic adress space</li>
+          <li>Dynamic address space</li>
         </ul>
       </div>
+
+      <div id="opcstructure" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <img src="img/opcstructure.png" style="height: 1300px; position: relative; top: 150px"/>
+      </div>
+
       <div id="typing" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
         <h1>Type System</h1>
         <ul>
@@ -110,6 +135,7 @@
           <li>All messaging is done by services </li>
           <li>Services define messaging protocols</li>
           <li>Browse, Read, Write, Sessions, Subscriptions</li>
+          <li>Request Response Based</li>
         </ul>
       </div>
 
@@ -133,7 +159,8 @@
       <div id="security" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
         <h1>Security</h1>
         <ul>
-          <li>TLS Authentication</li>
+          <li>Session and Role based</li>
+          <li>TLS Encryption on the Wire</li>
           <li>Encrypted Credentials</li>
           <li>Authentication via X.509 certificates</li>
           <li>not so up-to-date algorithms</li>
@@ -141,8 +168,15 @@
       </div>
 
 
-
-
+      <div id="scalability" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>Scalability</h1>
+        <ul>
+          <li>Scalable via Encodings</li>
+          <li>Binary for Embedded</li>
+          <li>XML for Enterprise</li>
+          <li>From ERP to OPC On-a-Chip</li>
+        </ul>
+      </div>
 
 
       <div id="imoddels" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
@@ -159,97 +193,64 @@
 
 
 
+      <div id="discovery" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>Discovery</h1>
+        <ul>
+          <li>Discover OPC Servers in the Local Link</li>
+          <li>via mDNS</li>
+        </ul>
+      </div>
 
       <div id="history" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
         <h1>History Access</h1>
         <ul>
           <li>HistoryRead Service</li>
           <li>Write Values to Databases</li>
-        </ul>
-      </div>
-
-      <div id="datamodelling" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
-        <h1>Integer Format</h1>
-        <img src="img/integer.png" />
-        <ul>
-          <li>Bitlength</li>
-          <li>Signing</li>
-          <li>Endianess</li>
-          <li>(U)Int 8 - 64</li>
+          <li>Data Aggregation</li>
+          <li>Defines Additional Attributes</li>
         </ul>
       </div>
 
       <div id="sdks" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
         <h1>Working SDKs</h1>
+        .NET, Java, C++, C, Node.js
       </div>
 
-      <div class="step slide" id="numbers" data-x="5980" data-y="-6200" data-rotate="180" data-scale="0.4">
-        <h1>Numbers in Javascript</h1>
+      <div id="vendors" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>Vendors</h1>
         <ul>
-          <li>Every number in Javascript is a <br/> 64-bit IEEE64 Value</li>
-          <li>2<sup>53</sup> Integer values possible -length of Mantissa</li>
-          <li>no BigInt in javascript</li>
+          <li>Unitied Automation</li>
+          <li>Softing</li>
+          <li>Matrikon OPC</li>
         </ul>
       </div>
 
-      <div class="step slide" id="bitwise" data-x="5980" data-y="-6600" data-rotate="180" data-scale="0.4">
-        <h1>Bit Level Operators</h1>
-          <ul>
-            <li>Shift operators: &lt;&lt;, &gt;&gt;, &gt;&gt;&gt; </li>
-            <li>Logical Operators: ^, | , &, ~ </li>
-            <li>converted to 32-bit integer before execution</li>
-            <li>mostly used as a replacement for Math.floor()</li>
-            <li class="highlight">loss of precicion and performance!</li>
-            <li class="highlight">no shifting for floating points!</li>
-          </ul>
-        </h1>
-      </div>
-    
-      <div class="step slide" id="fpproblem" data-x="5980" data-y="-7000" data-rotate="180" data-scale="0.4">
-        <h1>Floatingpoints and Dataviews</h1>
+      <div id="competing" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>What is OPC-UA ? </h1>
         <ul>
-          <li>DataView.getFloat and setFloat are not precise</li>
-          <li>own IEEE754 construction needed</li>
-          <li>based alot on string operations and rounding</li>
-
+          <li>CORBA 2.0 for Embedded</li>
+          <li>Not a Industrial BUS</li>
+          <li>All-In-One Solution</li>
         </ul>
       </div>
 
 
-      <div class="step slide" id="strings" data-x="5980" data-y="-7400" data-rotate="180" data-scale="0.4">
-        <h1>Strings and Big Integer</h1>
+      <div id="conclusion1" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>Positive</h1>
         <ul>
-          <li>Strings in OPC-UA are represented as UTF-8</li>
-          <li>utf8.js: Array of Byte to Utf8 String</li>
-          <li>Bignumber.js - based on arrays</li>
-          <li>Builds its own Arithmetics for arbitrary precicion</li>
+          <li>+ Scalable</li>
+          <li>+ Better what you had before</li>
+          <li>+ Millions of Possiblities</li>
         </ul>
       </div>
 
-
-
-      <div class="step slide" id="concBinary" data-x="5980" data-y="-7800" data-rotate="180" data-scale="0.4">
-        <h1>Approach for parsing Binary</h1>
-        <ol>
-          <li>Take n bytes from the dataview</li>
-          <li>calculate value for Integer or Float</li>
-          <li>Usage of Utf.js and BigInt.js for parsing Strings and 64 bit integers</li>
-          <li>increment a bytecounter</li>
-          <li>recursively build up cascading object tree based on message type</li>
-        </ol>
-      </div>
-
-
-
-
-
-
-
-
-
-      <div id="conclusion" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
-        <h1>Conclusion</h1>
+      <div id="conclusion2" class="step slide hidden" data-x="70000" data-y="-250000" data-scale="20">
+        <h1>Negative</h1>
         <ul>
+          <li>- Overengineering</li>
+          <li>- Bound to Request/Response</li>
+          <li>- Bound to Client/Server</li>
+          <li>- Bound to Extensive Modelling</li>
         </ul>
       </div>
 
